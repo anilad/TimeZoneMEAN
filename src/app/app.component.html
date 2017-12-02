@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>{{title}}</h1>
+
+  <button class="btn" (click)="onButtonClick($event)" [ngClass] = "{'on':PST}">PST</button>
+  
+  <button class="btn" (click)="onButtonClick($event)" [ngClass] = "{'on':MST}">MST</button>
+
+  <button class="btn" (click)="onButtonClick($event)" [ngClass] = "{'on':CST}">CST</button>
+
+  <button class="btn" (click)="onButtonClick($event)" [ngClass] = "{'on':EST}">EST</button>
+
+  <button class="btn" (click)="onButtonClick($event)">Clear</button>
+
+  <h4 *ngIf='!clear'>{{date | date:'medium':zone}}</h4>
+  <h4 *ngIf='clear'></h4>
+</div>
+
